@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barrio Secure</title>
+
+<style>
+body{
+    margin:0;
+    background:#111827;
+    color:white;
+    font-family:Arial, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+.card{
+    width:90%;
+    max-width:350px;
+    background:#1f2937;
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 0 20px rgba(255,0,0,.3);
+}
+button{
+    background:red;
+    color:white;
+    border:none;
+    padding:18px;
+    width:100%;
+    font-size:22px;
+    border-radius:15px;
+    cursor:pointer;
+}
+#estado{
+    margin-top:20px;
+    font-size:18px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<h1>🛡️ Barrio Secure</h1>
+<p>Tu seguridad en un solo toque.</p>
+
+<button onclick="activar()">🚨 ACTIVAR ALARMA</button>
+
+<p id="estado">Sistema listo.</p>
+
+<audio id="sirena">
+<source src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg" type="audio/ogg">
+</audio>
+
+</div>
+
+<script>
+function activar(){
+document.getElementById("sirena").play();
+document.getElementById("estado").innerHTML=
+"🚨 ¡Alarma activada!<br>📍 Ubicación enviada.<br>👥 Vecinos alertados.";
+}
+</script>
+
+</body>
+</html>
